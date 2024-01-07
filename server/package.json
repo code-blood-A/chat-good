@@ -6,11 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-<<<<<<< HEAD
     "start":"nodemon index.js",
-=======
-    "start":"node index.js",
->>>>>>> 99626c0c3ac6300d547837b9e87e5b5d7ac84fb8
     "build": "npm i"
   },
   "author": "",
