@@ -21,8 +21,8 @@ function Contacts() {
             return (
               <div onClick={() => {
                 dispatch(setActiveChat(e))
-              }} key={e._id} className={`flex items-center justify-between sm:gap-x-1 md:gap-x-1 mt-5 ${activeChat._id === e._id ? "bg-[#fafafa]" : "bg-[#fff]"} cursor-pointer  py-4 px-2`}>
-                <div className='flex items-center gap-x-3 sm:gap-x-1 md:gap-x-3'>
+              }} key={e._id} className={`rounded-lg shadow-inner shadow hover:shadow-inner shadow-gray flex items-center justify-between sm:gap-x-1 md:gap-x-1 ${activeChat._id === e._id ? "md:bg-green-500 m-5" : "bg-[#fff] "} cursor-pointer  py-4 px-2`}>
+                <div className='flex items-center  gap-x-3 sm:gap-x-1 md:gap-x-3'>
                   <img className='w-12 h-12  sm:w-12 sm:h-12 rounded-[30px] shadow-lg object-cover' src={getChatPhoto(e, activeUser)} alt="" />
                   <div>
                     <h5 className='text-[13.6px] sm:text-[16px] text-[#2b2e33] font-bold'>{getChatName(e, activeUser)}</h5>
@@ -32,8 +32,8 @@ function Contacts() {
                     }</p>
                   </div>
                 </div>
-                <div className='flex flex-col items-end gap-y-[8px]'>
-                  <p className='text-[12.4px] sm:text-[12px]  font-normal text-[#b0b2b3] tracking-wide'>{timeSince(new Date(Date.parse(e.updatedAt) - aDay))}</p>
+                <div className='m-5 flex flex-col items-end gap-y-[8px]'>
+                  <p className='text-[12.4px] sm:text-[12px]  font-normal text-black tracking-wide'>{timeSince(new Date(Date.parse(e.updatedAt) - aDay))}</p>
                 </div>
               </div>
             )

@@ -102,10 +102,10 @@ function Chat(props) {
       {
         activeChat ?
           <div className={props.className}>
-            <div className='flex justify-between items-center px-5 bg-[#ffff] w-[100%]'>
+            <div className='shadow-lg flex opacity-100 justify-between items-center text-white px-5 bg-stone-600 w-[100%]'>
               <div className='flex items-center gap-x-[10px]'>
                 <div className='flex flex-col items-start justify-center'>
-                  <h5 className='text-[17px] text-[#2b2e33] font-bold tracking-wide'>{getChatName(activeChat, activeUser)}</h5>
+                  <h5 className='text-[17px] text-white font-bold tracking-wide'>{getChatName(activeChat, activeUser)}</h5>
                   {/* <p className='text-[11px] text-[#aabac8]'>Last seen 5 min ago</p> */}
                 </div>
               </div>
@@ -113,7 +113,7 @@ function Chat(props) {
                 <Model />
               </div>
             </div>
-            <div className='scrollbar-hide w-[100%] h-[70vh] md:h-[66vh] lg:h-[69vh] flex flex-col overflow-y-scroll p-4'>
+            <div className='scrollbar-hide w-[100%] h-[70vh] md:h-[66vh] lg:h-[69vh] bg-[#faffa] flex flex-col overflow-y-scroll p-4'>
               <MessageHistory typing={isTyping} messages={messages} />
               <div className='ml-7 -mb-10'>
                 {
@@ -123,7 +123,7 @@ function Chat(props) {
 
               </div>
             </div>
-            <div className='absolute left-[31%] bottom-[8%]'>
+            <div className='rounded-lg ring ring-gray-500 ring-offset-0 absolute left-[31%] bottom-[8%]'>
               {
                 showPicker && <Picker data={data} onEmojiSelect={(e) => setMessage(message + e.native)} />
               }
@@ -162,7 +162,7 @@ function Chat(props) {
 
                     {showPicker ? <BsFillEmojiSmileFill className='w-[20px] h-[20px] text-[#ffb02e] border-[black]' /> : <BsEmojiSmile className='w-[20px] h-[20px]' />}
                   </div>
-                  <button onClick={(e) => keyDownFunction(e)} className='bg-[#f8f9fa] border-[2px] border-[#d4d4d4] text-[14px] px-2 py-[3px] text-[#9e9e9e] font-medium rounded-[7px] -mt-1'>Send</button>
+                  <button onClick={(e) => keyDownFunction(e)} className='bg-green-500 border-[2px] border-[#d4d4d4] text-[14px] px-2 py-[3px] text-white font-medium rounded-[7px] -mt-1'>Send</button>
                 </div>
               </div>
             </div>

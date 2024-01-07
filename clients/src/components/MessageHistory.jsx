@@ -14,7 +14,7 @@ function MessageHistory({ messages }) {
         {messages &&
           messages.map((m, i) => (
 
-            <div className='flex items-center gap-x-[6px]' key={m._id} >
+            <div className='flex items-center gap-x-[6px] ' key={m._id} >
               {(isSameSender(messages, m, i, activeUser.id) ||
                 isLastMessage(messages, i, activeUser.id)) && (
                   <Tooltip label={m.sender?.name} placement="bottom-start" hasArrow>
