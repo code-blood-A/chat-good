@@ -102,7 +102,7 @@ function Chat(props) {
       {
         activeChat ?
           <div className={props.className}>
-            <div className='shadow-lg flex opacity-100 justify-between items-center text-white px-5 bg-stone-600 w-[100%]'>
+            <div className='shadow-lg flex opacity-100 justify-between items-center text-white px-5 bg-green-900 w-[100%]'>
               <div className='flex items-center gap-x-[10px]'>
                 <div className='flex flex-col items-start justify-center'>
                   <h5 className='text-[17px] text-white font-bold tracking-wide'>{getChatName(activeChat, activeUser)}</h5>
